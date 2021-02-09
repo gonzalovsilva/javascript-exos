@@ -10,6 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-    // your code here
+    let date = new Date;
+
+    if(date.getHours() < 18){
+        document.getElementById("target").innerHTML = "Bonjour";
+    }else{
+        document.getElementById("target").innerHTML = "Bonsoir";
+    }
 })();

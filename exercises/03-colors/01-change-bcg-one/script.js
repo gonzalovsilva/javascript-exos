@@ -10,5 +10,31 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    const performOperation = operation => {
+        let bg = document.body;
+
+        switch (operation) {
+            case "red":
+                bg.style.backgroundColor = "red";
+                break;
+            case "green":
+                bg.style.background = "green";
+                break;
+            case "yellow":
+                bg.style.background = "yellow";
+                break;
+            case "blue":
+                bg.style.background = "blue";
+                break;
+            default:
+                bg.style.background = "#16232E";
+        }
+    };
+
+    Array.from(document.querySelectorAll("button")).forEach($btn =>
+        $btn.addEventListener(
+            "click",
+            () => (performOperation($btn.id), false),
+        ),
+    );
 })();

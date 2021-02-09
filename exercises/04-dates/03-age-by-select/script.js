@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', () => {
+
+        let dateNow, age, year, month, day;
+        dateNow = new Date();
+        year = document.getElementById('dob-year').value;
+        month = document.getElementById('dob-month').value;
+        day = document.getElementById('dob-day').value;
+
+        age = dateNow.getFullYear() - year;
+        // if (dateNow.getMonth() < month || (dateNow.getMonth() == month && dateNow.getDate() < day)) {
+        //     age--;
+        // }
+        console.log(age);
+        console.log(month);
+    });
 })();
